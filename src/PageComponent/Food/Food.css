@@ -1,0 +1,148 @@
+
+.food__main {
+    width: 100%;
+}
+.food__bar {
+    width: 100%;
+}
+
+.food__filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food__checkbox::before {
+    height: 20px;
+}
+
+.food__checkbox::after {
+    height: 20px;
+}
+
+.food__price input {
+    width: 45px;
+}
+
+.food__row {
+    display: flex;
+}
+
+.food__button button {
+    color: orange
+}
+
+.food__button button:hover {
+    text-decoration: underline;
+}
+
+.food__bar {
+    padding: 8px
+}
+
+.food__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-row-gap: 50px;
+    margin-top: 20px;
+}
+
+.food__description {
+    max-width: 500px;
+}
+
+.food__description-wrapper {
+    margin-bottom: 30px;
+}
+
+
+.food__detail {
+    padding: 10px;
+}
+
+.food__price {
+    position: relative;
+}
+
+.food__price-tab {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: black;
+    width: 210px;
+    padding: 4px
+}
+
+.food__price-tab input {
+    width: 55px;
+}
+
+.food__price-tab__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.food__filter-text {
+    flex: 1 1 auto;
+    margin-left: 10px;
+}
+.food__filter-text input {
+    width: calc(100% - 10px)
+}
+
+.foodModalDetail__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.FoodModalDetail__hr {
+    margin: 10px 0
+}
+
+.foodHave {
+    width: 100%;
+}
+
+.foodHave img {
+    max-width: 100%;
+}
+
+.allFood__row {
+    display: flex;
+}
+
+.allFood__row a {
+    margin-left: 10px;
+}
+
+.allFoodProgram {
+    height: 500px;
+    overflow: auto
+}
+
+.allFoodProgram {
+    background-color: white;
+    height: 110px;
+    color: black;
+    position: relative;
+}
+
+.new-food {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+}
+
+
+.activeFood__row  {
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,9 @@
+.about__row {
+    display: flex;
+}
+
+.about__column {
+    flex: 1 1 50%
+}
+
+

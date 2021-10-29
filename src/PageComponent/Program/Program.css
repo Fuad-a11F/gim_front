@@ -1,0 +1,72 @@
+.program__did, .program__now {
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    height: 35px;
+    width: 250px;
+    background-color: red;
+    transform: rotate(-30deg);
+    text-align: center;
+    font-size: 21px;
+    color: white
+}
+
+.program__now {
+    background-color: green;
+}
+
+.program__none {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px);
+}
+
+
+.old__program {
+    margin-top: 40px;
+}
+
+.carditem__row {
+    display: flex;
+    margin-bottom: 40px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carditem__column:nth-child(1) {
+    flex: 0 0 200px
+}
+
+.carditem__column:nth-child(1) img {
+    max-width: 100%;
+}
+
+.carditem__column:nth-child(2) {
+    flex: 1 1 100%;
+    margin-left: 20px;
+}
+
+.carditem__column:nth-child(3) {
+    flex: 1 1 250px;
+    align-self: center;
+}
+
+
+.oldProgram, .newProgram {
+    background-color: rgba(255, 166, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.newProgram {
+    background-color: rgb(255, 166, 0);
+}
+

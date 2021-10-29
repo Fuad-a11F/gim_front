@@ -1,0 +1,13 @@
+.programWrite__btn button {
+    text-align: right;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.programWrite__btn {
+    display: flex;
+    justify-content: flex-end;
+}

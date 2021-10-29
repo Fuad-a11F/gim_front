@@ -1,0 +1,105 @@
+
+
+.header__menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    z-index: 15;
+    padding: 10px 20px;
+    width: 170px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.header__menu a {
+    text-decoration: none;
+    color: black
+}
+
+.header__menu a:hover {
+    color: orange
+}
+
+.menu__wrapper img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu__wrapper {
+    margin-left: 25px;
+}
+
+.menu__wrapper button {
+    border-radius: 50%;
+    object-fit: cover;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.link__row {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-active button {
+    outline: 3px solid orange;
+}
+
+
+.header__column > ul > li {
+    list-style: none;
+    display: inline;
+}
+
+li {
+    list-style: none;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__column:first-child {
+    flex: 1 1 auto
+}
+
+.menu {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    white-space: nowrap;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid;
+    color: black;
+    z-index: 100;
+}
+
+.none {
+    display: none;
+}
+
+.menu__wrapper {
+    position: relative;
+}
+
+.header__link {
+    margin-left: 20px;
+}
+
+.header__item {
+    text-decoration: none;
+    color: inherit
+}
+
+.header__link a:hover {
+    color: orange
+}
+
+.active {
+    color: orange
+}

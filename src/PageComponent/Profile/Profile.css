@@ -1,0 +1,119 @@
+.profile__row {
+    display: flex;
+}
+
+.profile__img {
+    flex: 0 0 30%;
+    position: relative;
+    min-height: 200px;
+}
+
+.profile__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.profile__info-row {
+    display: flex;
+}
+
+.paid {
+    border: 5px solid green;
+}
+
+.profile__info-wrapper {
+    flex: 0 0 70%;
+    margin-left: 20px;
+}
+
+.profile__tabs {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    align-items: start;
+}
+
+.profile__tab:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 7px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab-active {
+    border-bottom: 2px solid white;
+    width: 100%;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+.ticket-finish, .ticket-not, .ticket-yes {
+    font-size: 20px;
+    color: red;
+    position: relative;
+    left: 17px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+.ticket-yes {
+    color: green;
+}
+
+.ticket-yes::before {
+    content: '✓';
+    position: absolute;
+    left: -17px;
+    top: 0
+}
+
+.ticket-finish::before, .ticket-not::before {
+    content: 'X';
+    position: absolute;
+    left: -17px;
+    top: 0
+}
+
+.profile__info-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.profile__info {
+    margin-top: 20px;
+}
+
+
+.ProgramPart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.friend__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px
+}
+
+.friend__image {
+    width: 100%;
+}
+
+.friend__image img {
+    max-width: 100%;
+}
+
+.friend__row {
+    display: flex;
+}
+
+.friend__lastname {
+    margin-left: 12px;
+}

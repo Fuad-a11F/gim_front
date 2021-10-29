@@ -1,0 +1,40 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    min-height: 100%;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 7;
+}
+
+.modal__wrapper {
+    min-height: 200px;
+    min-width: 460px;
+    background-color: #262626;
+    border-radius: 5px;
+    max-height: calc(100vh - 50px);
+    transform: scale(0);
+    animation: appear .4s ease forwards;
+    color: white;
+    display: flex;
+    flex-direction: column;
+} 
+
+@keyframes appear {
+    0% {   
+        transform: scale(0);
+    }
+
+    95% {
+        transform: scale(1.07);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,80 @@
+.setting__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px
+}
+
+.setting__info {
+    position: relative;
+    top: 22px;
+}
+
+.setting__image {
+    width: 100%;
+
+}
+
+.setting__image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.warning {
+    color: red;
+    font-size: 14px;
+}
+
+.setting__row {
+    display: flex;
+}
+
+.setting__row p {
+    margin-right: 10px;
+}
+
+.ChangePasswordPart {
+    width: 300px;
+    margin: 0 auto
+}
+
+.new__password {
+    position: relative;
+    padding: 5px;
+    cursor: not-allowed;
+    margin-top: 60px;
+}
+
+.none_points {
+    pointer-events: none;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+    cursor: not-allowed;
+ 
+}
+
+.block__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block__img img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 7;
+}

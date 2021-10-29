@@ -1,38 +1,248 @@
-.App {
-  text-align: center;
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 20px
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    min-height: 100vh;
+    overflow: auto;
+    background-color: rgb(27, 27, 28);
+    color: white
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.main__label span {
+    color: orange;
+    font-size: 38px;
+    font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+
+.table__number {
+    width: 10%;
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table__desc {
+    width: 60%;
+    text-align: left;
 }
+
+.table__sets {
+    width: 15%;
+    text-align: left;
+}
+
+.table__reps {
+    width: 15%;
+    text-align: left;
+} 
+
+
+
+td > input {
+    width: 100%;
+    height: 38px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: black
+}
+
+table {
+    width: 100%;
+}
+
+td > input::placeholder {
+    color: black;
+}
+
+td {
+    color: black
+}
+
+.foodWrite__number {
+    text-align: left;
+}
+
+.foodWrite__desc {
+    width: 100%;
+    text-align: left;
+}
+
+
+.wrapperColumn__row {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar__part {
+    flex: 0 0 25%;
+    padding-right: 20px;
+}
+
+.main__part {
+    flex: 0 0 75%
+}
+
+
+.message__bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.abonement h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: orange
+}
+
+.abonement__wrapper {
+    position: relative;
+    height: 210px;
+    min-width: 300px;
+}
+
+.abonement__wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abonement > p {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.abonement__wrapper p {
+    position: relative;
+    z-index: 6;
+    font-size: 34px;
+}
+
+
+
+
+.isOld {
+    opacity: 0.5;
+}
+
+.isOld:hover {
+    opacity: 0.8;
+}
+
+.side__button {
+    width: calc(100% - 20px);
+    height: 35px;
+    margin-top: 8px;
+}
+
+
+.ml-20 {
+    margin-left: 20px;  
+}
+
+.FoodModalDetail {
+    padding: 15px
+}
+
+
+
+.foodTab {
+    width: 130px;
+}
+
+
+.food_btn_start {
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+
+
+.time_left {
+    text-align: center;
+    font-size: 22px;
+    color: orange;
+    margin-bottom: 8px;
+}
+
+.comment__grid {
+    display: grid;
+    grid-template-columns: 50px 1fr 60px;
+}
+
+
+.comment__image {
+    width: 100%;
+    height: 50px;
+}
+
+.comment__image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comment__like {
+    align-self: end
+}
+
+.comment__time {
+    color: rgb(151, 151, 151);
+    font-size: 13px;
+}
+
+.comment__text {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.comment__text p {
+    font-size: 17px;
+    color:rgb(179, 179, 179)
+}
+
+
+
+.active-none {
+    color: white
+}
+
+
+
+.user-name {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+.user-name:hover {
+    text-decoration: underline;
+}
+

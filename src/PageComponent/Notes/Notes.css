@@ -1,0 +1,54 @@
+.addnote__modal {
+    padding: 20px;
+}
+
+.note__item {
+    width: 100%;
+    padding: 7px;
+    height: 60px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.note__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.note__zero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 180px);
+}
+
+.note__list {
+    margin-top: 40px;
+    color: black
+}
+
+.ReadNoteModal {
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.ReadNoteModal__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ReadNoteModal img {
+    cursor: pointer;
+}
+
+.delete_icon-note {
+    margin-right: 8px;
+}
+
+.save_icon-note {
+    margin-right: 8px;
+}

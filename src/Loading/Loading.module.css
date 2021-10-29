@@ -1,0 +1,77 @@
+.loading__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.theme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 7;
+}
+
+.icon {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    animation: round 5s ease infinite;           
+}
+
+.label {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: calc(20% + 130px);
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    font-size: 22px;
+    color: white
+}
+
+@keyframes round {
+    0% {
+        transform: translate(-50%, -50%) rotate(-45deg);        
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}

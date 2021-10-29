@@ -1,0 +1,41 @@
+/* ======= ProgramStart.jsx ======= */
+
+.programStart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programStart__image {
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.programStart__image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.time_left {
+    background-color: white;
+    color: black;
+    margin: 0 10px 0 10px;
+    height: 32px;
+    width: 32px
+}
+
+.time_left_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.time_left-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+

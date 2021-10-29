@@ -1,0 +1,129 @@
+.subscribe {
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe__wrapper {
+    max-width: 400px;
+    text-align: center;
+}
+
+.subscribe__wrapper img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.playlist h3, .filter h3, .sort h3, .favorite h3, .search h3, .allmusic h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.playlist, .filter, .sort, .favorite, .search, .allmusic {
+    margin-bottom: 17px;
+}
+
+.playlist__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist__row a {
+    color: white;
+    text-decoration: none;
+}
+
+.playlist__row a:hover {
+    text-decoration: underline ;
+}
+
+.music__wrapper {
+    border: 1px solid black;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 10px;
+    min-height: 350px;
+    height: calc(100% - 50px);
+    padding: 30px 25px
+}
+
+.music__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add__playlist {
+    padding: 17px
+}
+
+.filter_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foodTab__wrapper {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    background-color: black;
+    z-index: 7;
+    padding: 10px;
+}
+
+.music__item-buttons {
+    position: relative;
+}
+
+.music__item-link {
+    cursor: pointer;
+}
+
+.music__item-link:hover {
+    color: orange
+}
+
+.audio__wrapper {
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+    padding: 5px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 55%, rgba(20,20,20,1) 58%);
+}
+
+.audio__row-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.audio__row-controls {
+    display: flex;
+}
+
+.music-long {
+    flex: 1 1 auto
+}
+
+.music-sound {
+    width: 90px
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.search input {
+    width: 100%;
+}
+
+.audio__btn {
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 55%, rgba(40,40,40,1) 58%);
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(20,20,20,1);
+    outline: none;
+    cursor: pointer;
+} 

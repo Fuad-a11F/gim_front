@@ -1,0 +1,79 @@
+.dark {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.advantage__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.advantage__image {
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+
+.coach__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px
+}
+
+.coach__wrapper {
+    background-color: rgb(199, 199, 199);
+    padding: 20px;
+    color: black
+}
+
+.coach__image {
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+}
+
+.coach__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.coach__dark {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coach__dark button {
+    width: 100px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    opacity: 0.2;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.coach__dark:hover button {
+    opacity: 1;
+}
+
+.coach__dark:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+
