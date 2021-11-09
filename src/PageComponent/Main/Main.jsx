@@ -1,6 +1,7 @@
 import React from 'react'
 import AnimArrow from './AnimArrow'
 import image from './images/themeImage.png'
+import Coaches from './Coaches'
 import './Main.css'
 
 const Main = () => {
@@ -11,6 +12,9 @@ const Main = () => {
             </div>
             <div className='main__column-content'>
                 <h2>Fitness Gym</h2>                   
+
+                {/* <Coaches /> */}
+
                 <p className='main__label'>Записывайся <span>прямо</span> сейчас</p>
                 <AnimArrow />
                 <button className='button'>Записаться</button>

@@ -8,7 +8,7 @@ const MainInfo = ({ user_id }) => {
     let [isMe, setIsMe] = React.useState(false)
     let user = useSelector(state => state.user.user)
     let [isFriend, setIsFriend] = React.useState(false)
-    console.log(ticket)
+
     React.useEffect(() => {
         axios.get('http://127.0.0.2:8000/api/user/check_user/' + user_id, 
             {headers: {Authorization: 'Bearer ' + localStorage.getItem('token')}})
@@ -40,13 +40,13 @@ const MainInfo = ({ user_id }) => {
             )
         }
     }
-    
+    console.log(user);
     return (
         <div>
             {user.position === 'student' && (
                 <div className='profile__info'>
                     <div className='profile__info-row'>
-                        <p>{user.username} {user.lastname}, {CountAge(user.birth)} лет ({user.birth ?  user.birth.slice(0, 4) : 'kek'} год) - {user.position}</p>
+                        <p>{user.username} {user.lastname}, {user.birth ? CountAge(user.birth) + 'лет' : 'возраст не указан'} - {user.position}</p>
                         {buttons()}
                     </div>
                     {ticket.active == true && (
@@ -63,10 +63,10 @@ const MainInfo = ({ user_id }) => {
             )}
             {user.position === 'coach' && (
                 <div className='profile__info'> 
-                    <p>{user.username} {user.lastname}, {CountAge(user.birth)} лет ({user.birth ?  user.birth.slice(0, 4) : 'kek'} год) - {user.position}</p>
-                    <p>Обращаться как: нрв иыащфл</p>
+                    <p>{user.username} {user.lastname}, {user.birth ? CountAge(user.birth) + 'лет' : 'возраст не указан'} - {user.position}</p>
+                    {/* <p>Обращаться как: нрв иыащфл</p> */}
                     <p>Учеников: 8237</p>
-                    <p>Опыт работы: {user.experience} лет</p>
+                    <p>Опыт работы: {user.experience} 7 лет</p>
                 </div>
             )}
       

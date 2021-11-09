@@ -4,6 +4,7 @@ import moment from 'moment'
 const Timer = ({ timeLeft }) => {
 
     return (
+        <>
             <p className='time_left_wrapper'>
                 <div className='time_left-item'>
                     <p className='time_left'>{timeLeft[0]}</p>
@@ -26,6 +27,7 @@ const Timer = ({ timeLeft }) => {
                 
                 
             </p>
+        </>
     )
 }
 

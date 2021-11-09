@@ -222,3 +222,51 @@ audio::-webkit-media-controls-panel {
     margin: 10px 0;
 }
 
+.programWrite__btn button {
+    text-align: right;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* .button {
+    color: white;
+    background-color: orange;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    top: 15px
+} */
+
+.time {
+    display: flex;
+}
+
+.time > * {
+    padding: 2px
+}
+
+
+.timeline {
+    background: white;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 #0008;
+    height: 10px;
+  }
+
+ .timeline .progress {
+    background: coral;
+    width: 0%;
+    height: 10px;
+    transition: 0.25s;
+  }
+
+  .audio__row {
+      display: flex;
+      justify-content: space-between;
+  }

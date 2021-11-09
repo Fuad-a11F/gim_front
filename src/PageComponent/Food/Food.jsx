@@ -29,7 +29,7 @@ const Food = () => {
                 <div className='food__bar'>
                     <p>Активная программа питания</p>
                     {active ? <ActiveFood /> : <AllFoodProgram setActive={setActive} />}
-                    <FoodButtons setActive={setActive}/>
+                    {active && <FoodButtons setActive={setActive}/>}
                 </div>
             </SideBar>
             <Main>

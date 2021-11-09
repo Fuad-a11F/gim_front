@@ -65,14 +65,14 @@ const Registration = ({ setModal }) => {
                     </div>
                     <form action="#" onSubmit={(e) => sendForm(e, email)}>
                         <InputText type='name' value={name} setValue={setName} name='name' label='Имя' placeholder='Введите Ваше имя'/>
-                        <InputText type='name' value={lastName} setValue={setLastName} name='lastname' label='Фамилия' placeholder='Введите Вашу фамилию'/>
+                        {/* <InputText type='name' value={lastName} setValue={setLastName} name='lastname' label='Фамилия' placeholder='Введите Вашу фамилию'/> */}
                         <InputText value={email} setValue={setEmail} name='email' label='Еmail' placeholder='Введите ваш email'/>
                         <InputText type='text' value={password} setValue={setPassword} name='password' label='Пароль' placeholder='Введите пароль'/>
                         <InputText type='text' value={password2} setValue={setPassword2} name='password2' label='Повторите пароль' placeholder='Введите пароль повторно'/>
-                        <InputSelect value={status} setValue={setStatus} name='language' label='Статус' placeholder='Статус' option={option} /> 
+                        {/* <InputSelect value={status} setValue={setStatus} name='language' label='Статус' placeholder='Статус' option={option} /> 
                         {status === 'coach' && 
                             <InputText type='text' value={passwordAdmin} setValue={setPasswordAdmin} name='passwordAdmin' label='Пароль админа' placeholder='Введите пароль одного из админов'/>
-                        }
+                        } */}
                         <InputCheck value={agree} setValue={setAgree} name='agree'>Принимаю <Link title='условия' to='#' /> использования</InputCheck>
                         <Button disabled={disabled} title='Зарегистрироваться'/>
                     </form>

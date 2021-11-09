@@ -39,7 +39,7 @@ const Menu = ({ setMenu, status }) => {
                 <li><NavLink to={"/profile/" + userId + '/programs'}>Мой профиль</NavLink></li>
                 <li><NavLink to="/notes">Заметки</NavLink></li>
                 {status == 'Тренер' && <li><NavLink to="/draft">Черновик</NavLink></li>}
-                <li><NavLink to="/favourite">Избранное</NavLink></li>
+                {/* <li><NavLink to="/favourite">Избранное</NavLink></li> */}
                 <li><NavLink to="/setting">Настройки</NavLink></li>
                 <li><button onClick={logoutF} >Выход</button></li>
             </ul>

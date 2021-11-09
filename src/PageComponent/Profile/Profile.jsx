@@ -48,7 +48,7 @@ const Profile = () => {
                     {active === 'О себе' && <AboutMe />}
                 </div>
             </div>
-            <hr />
+            <hr className='profile__hr'/>
             <WrapperColumns>
                 <SideBar>
                     <Navigations user_id={user_id}/>

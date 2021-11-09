@@ -124,10 +124,10 @@
 .checkbox::before {
     content: '';
     display: block;
-    height: 28px;
+    height: 25px;
     position: relative;
     top: 3px;
-    width: 28px;
+    width: 25px;
     border: 1px solid #DBE2EA;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
     border-radius: 4px;
@@ -139,12 +139,12 @@
     position: absolute;
     top: 3px;
     left: 0;
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 25px;
     border-radius: 4px;
     line-height: 28px;
-    border: 1px solid #0880AE;
-    color: #0880AE;
+    border: 1px solid orange;
+    color: orange;
     font-size: 21px;
     text-align: center;
 }

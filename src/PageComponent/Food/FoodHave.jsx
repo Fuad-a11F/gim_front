@@ -1,5 +1,6 @@
 import React from 'react'
 import FoodModalDetail from './FoodModalDetail'
+import dots_icon from '../icon/dots.png'
 
 const FoodHave = ({ food }) => {
     let [modal, setModal] = React.useState(false)
@@ -15,10 +16,10 @@ const FoodHave = ({ food }) => {
             <div>
                 <div className='foodHave'>
                     <img src={food.image} alt="" />
+                    <div onClick={() => detail_open(food.id)} className='food-theme'></div>
                 </div>
                 <div>
                     <p>{food.title}</p>
-                    <button onClick={() => detail_open(food.id)} className='button'>Подробнее</button>
                 </div>
             </div>
             {modal && <FoodModalDetail id={id} setModal={setModal} />}

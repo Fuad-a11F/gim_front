@@ -18,6 +18,10 @@
     margin-bottom: 7px;
 }
 
+.note__row img {
+    cursor: pointer;
+}
+
 .note__zero {
     display: flex;
     justify-content: center;

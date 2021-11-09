@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import avatar from '../images/avatar.jpg'
+import avatar from '../images/none_ava.png'
 import { NavLink } from 'react-router-dom'
 
 const FriendPart = () => {
@@ -10,7 +10,7 @@ const FriendPart = () => {
         axios.get('http://127.0.0.2:8000/api/friend/get_friend/', {headers: {Authorization: 'Bearer ' + localStorage.getItem('token')}})
             .then(data => setFriend(data.data))
     }, [])
-
+    console.log(friend);
     return (
         <div className='friend__wrapper'>
             {friend.length != 0 && (
@@ -20,7 +20,7 @@ const FriendPart = () => {
                             <div className='friend__image'>
                                 <img src={item.friends.image ?? avatar} alt="" />
                             </div>
-                            <NavLink to={'/profile/' + item.id + '/program'} className='friend__row'>
+                            <NavLink to={'/profile/' + item.friends.id + '/program'} className='friend__row'>
                                 <p>{item.friends.username}</p>
                                 <p className='friend__lastname'>{item.friends.lastname}</p>
                             </NavLink>

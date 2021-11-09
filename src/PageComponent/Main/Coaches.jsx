@@ -15,7 +15,7 @@ const Coaches = () => {
     return (
         <>
            <h2>Наши тренера</h2>
-           <div className="coach__row">
+           <div className="main-coach__row">
                {coaches.map(item => <Coach coach={item}/>)}
            </div>
         </>

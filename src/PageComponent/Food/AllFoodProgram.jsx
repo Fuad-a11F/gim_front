@@ -31,7 +31,7 @@ const AllFoodProgram = ({ setActive }) => {
                                 <div>
                                     <div className='allFood__row'>
                                         <p>Тренер: </p>
-                                        <NavLink to={'/profile/' + item.user.id}>{item.user.name} {item.user.lastname}</NavLink>                               
+                                        <NavLink to={'/profile/' + item.user.id}>{item.user.username}</NavLink>                               
                                     </div>
                                     <div className='allFood__row'>
                                         <p>Отправлено в: {item.date}</p>                             

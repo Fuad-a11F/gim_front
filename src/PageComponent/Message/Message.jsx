@@ -1,29 +1,22 @@
 import React from 'react'
-import ButtonLink from '../../Component/components/ButtonLink'
 import Chat from './Chat'
 import SendForm from './SendForm'
 import './Message.css'
+import MessageNavigation from './MessageNavigation'
+import MessageItem from './MessageItem'
 
 const Message = () => {
+
     return (
         <div className='message'>
             <div className="message__row">
                 <div className="message__column">
-                    <div>
-                        <Chat />
-                    </div>
-                    <div className='message__bottom'>
-                        <ButtonLink title='Чаты' />
-                        <ButtonLink title='Друзья' />
-                    </div>
+                    <Chat />
+                    <MessageNavigation />
                 </div>
                 <div className="message__column">
-                    <div>
-                        123123
-                    </div>
-                    <div className='message__bottom'>
-                        <SendForm />
-                    </div>      
+                    <MessageItem />         
+                    <SendForm />
                 </div>
             </div>
         </div>

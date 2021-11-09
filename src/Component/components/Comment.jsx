@@ -35,15 +35,15 @@ const Comment = ({ comment, setCommentLike }) => {
             }
         })
     }
-
+    
     return (
         <div className='comment'>
             <div className='comment__grid'>
                 <div className='comment__image'>
-                    <img src={comment.user.image ?? none} alt="" />
+                    <img src={comment.user.image ? comment.user.image : none} alt="" />
                 </div>
                 <div className='comment__text'>
-                    <NavLink className='user-name' to={'/profile/' + comment.user.id}>{comment.user.name} {comment.user.lastname}</NavLink>
+                    <NavLink className='user-name' to={'/profile/' + comment.user.id}>{comment.user.username} {comment.user.lastname}</NavLink>
                     <span className='comment__time'>{TimeCorrect(comment.date, 'all')}</span>
                     <p>{comment.text}</p>
                 </div>

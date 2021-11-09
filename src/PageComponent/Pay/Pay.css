@@ -87,3 +87,8 @@
     height: 21px;
     width: 45px;
 }
+
+.pay__info img {
+    margin-bottom: 20px;
+    border-radius: 20px;
+}

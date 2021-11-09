@@ -80,7 +80,7 @@ const Auth = ({ status, check_active_avatar }) => {
     return (
         <ul className='link__row'>
             <li className='header__link'><NavLink ref={news} exact to='/' className='header__item' >Новости</NavLink></li>
-            <li className='header__link'><NavLink ref={message}  to='/message' className='header__item' >Сообщения</NavLink></li>
+            <li className='header__link'><NavLink ref={message}  to='/message#chats' className='header__item' >Сообщения</NavLink></li>
             {status === 'Посетитель' ?
                 <>
                     {auth_ticket && (!auth_ticket.active && <li className='header__link'><NavLink ref={abonement} className='header__item' to="/abonement">Абонементы</NavLink></li>)}
@@ -95,9 +95,9 @@ const Auth = ({ status, check_active_avatar }) => {
             }
             <li className='header__link'><NavLink ref={musics} className='header__item' to="/music">Музыка</NavLink></li>
             <li className={'menu__wrapper ' + (check_active_avatar() && 'avatar-active')}>
-                <button onClick={() => setMenu(true)}>
-                    {userPhoto && <img src={userPhoto.image ?? none} width='40' height='40' alt="" />}
-                </button>
+             
+                {userPhoto && <img onClick={() => setMenu(true)} src={userPhoto.image ?? none} width='40' height='40' alt="" />}
+            
                 {menu && <Menu status={status} setMenu={setMenu} />}
             </li>
         </ul>   

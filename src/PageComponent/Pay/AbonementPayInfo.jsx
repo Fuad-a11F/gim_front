@@ -12,8 +12,6 @@ const AbonementPayInfo = ({ image, isCoach, period }) => {
     let time_buy = moment()
     
     function finish_time() {
-        let future_time
-
         switch (period) {
             case 'day':
                 dispatch(add_create_ticket({start_time: time_buy.format('YYYY-MM-DD'), 

@@ -1,11 +1,11 @@
 import React from 'react'
 import { add_user } from '../../../redux/UserSlice'
-import avatarka from '../images/avatarka.jpg'
 import Button from '../../../Component/components/Button'
 import InputText from '../../../Component/components/InputText'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { CountAge } from '../../../CountAge'
+import Image from '../Image'
 
 const MainPart = () => {
     let dispatch = useDispatch()
@@ -15,6 +15,7 @@ const MainPart = () => {
     let [birth, setBirth] = React.useState('Загрузка...')
     let [email, setEmail] = React.useState('Загрузка...')
     let [phone, setPhone] = React.useState('Загрузка...')
+    let [image, setImage] = React.useState('')
 
     React.useEffect(() => {
         axios.get('http://127.0.0.2:8000/api/user/get_user/', {headers: {Authorization: 'Bearer ' + localStorage.getItem('token')}})
@@ -26,19 +27,18 @@ const MainPart = () => {
                 setBirth(data.data.birth ?? null)
                 setEmail(data.data.email ?? '')
                 setPhone(data.data.phone ?? '')
+                setImage(data.data.image ?? '')
             })
     }, [])
 
     function update_user() {
-        axios.patch('http://127.0.0.2:8000/api/user/update_user/', {username, fathername, lastname, birth, email, phone}, { headers: { Authorization: 'Bearer ' + localStorage.getItem('token') } })
+        axios.patch('http://127.0.0.2:8000/api/user/update_user/', {username, fathername, lastname, birth, email, phone, image}, { headers: { Authorization: 'Bearer ' + localStorage.getItem('token') } })
     }
 
     return (
             <div className="setting__grid">
                 <div className='setting__info'>
-                    <div className='setting__image'>
-                        <img src={avatarka} alt="" />
-                    </div>
+                    <Image setImage={setImage} image={image}/>
                     <div className='setting__row'>
                         <p>{username}</p>
                         <p>{lastname}</p>

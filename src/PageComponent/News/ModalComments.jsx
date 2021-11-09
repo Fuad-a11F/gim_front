@@ -9,18 +9,20 @@ import { comment_new_add } from '../../redux/newSlice'
 import news_image from './images/newImage.jpg'
 import { Button, makeStyles } from '@material-ui/core'
 
+let useStyles = makeStyles({
+    btn: {
+        color: 'white',
+
+    }
+})
+
 const ModalComments = ({ setModal, id, index }) => {
     let dispatch = useDispatch()
     let new_comment = useSelector(state => state.new.comment_new)
     let [comment, setComment] = React.useState([])
-    let [nextComment, setNextComment] = React.useState('')
+    let [nextComment, setNextComment] = React.useState()
+    let classes = useStyles()
 
-    let styles = makeStyles({
-        btn: {
-            color: 'white',
-
-        }
-    })
     
     React.useEffect(() => {
         dispatch(comment_new_add(id))
@@ -30,6 +32,7 @@ const ModalComments = ({ setModal, id, index }) => {
                 setNextComment(data.data.next);
             })
     }, [])
+
 
     function next_page_comment() {
         axios.get(nextComment, {headers: {Authorization: 'Bearer ' + localStorage.getItem('token')}})
@@ -61,7 +64,7 @@ const ModalComments = ({ setModal, id, index }) => {
                 })}
                 {nextComment != null && (
                     <div className='load_more-wrapper'>
-                        <Button className={styles().btn} onClick={() => next_page_comment()}>Загрузить еще</Button>
+                        <Button className={classes.btn} onClick={() => next_page_comment()}>Загрузить еще</Button>
                     </div>
                 )}
             </div>

@@ -13,6 +13,10 @@ let audio = new Audio()
 const AudioPlayer = () => {
     let music = useSelector(state => state.playlist.now_singing)
     let [isPlay, setIsPlay] = React.useState(false)
+    let progressRef = React.useRef()
+    let timelineRef = React.useRef()
+    let lengthRef = React.useRef()
+    let currentRef = React.useRef()
 
     React.useEffect(() => {
         if (music.music) {
@@ -23,8 +27,42 @@ const AudioPlayer = () => {
         }
     }, [music.music])
 
+    function music_rewind(e) {
+        const timelineWidth = window.getComputedStyle(timelineRef.current).width;
+        const timeToSeek = e.offsetX / parseInt(timelineWidth) * audio.duration;
+        console.log(timeToSeek);
+        audio.currentTime = 43;
+    }
+
+    React.useEffect(() => {
+        let audio_interval = setInterval(() => {
+            progressRef.current.style.width = audio.currentTime / audio.duration * 100 + "%";
+            currentRef.current.textContent = getTimeCodeFromNum(audio.currentTime);
+        }, 500);
+
+        audio.addEventListener('loadeddata', () => {
+            lengthRef.current.textContent = getTimeCodeFromNum(audio.duration);
+        })
+
+        return () => {
+            clearInterval(audio_interval)
+        }
+    }, [])
+
+    function getTimeCodeFromNum(num) {
+        let seconds = parseInt(num);
+        let minutes = parseInt(seconds / 60);
+        seconds -= minutes * 60;
+        const hours = parseInt(minutes / 60);
+        minutes -= hours * 60;
+      
+        if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+        return `${String(hours).padStart(2, 0)}:${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+    }
+
     function play() {
-        audio.src = music.music
+        if (!audio.src)
+            audio.src = music.music
         audio.play()
         setIsPlay(true)
     }
@@ -36,10 +74,17 @@ const AudioPlayer = () => {
 
     return (
         <div className="audio__wrapper">
-            <div className="audio__row-info">
-                {Object.keys(music) != 0 ? <p>{music.title}</p> : <p>Песня не выбрана</p>}
+            <div className='audio__row'>
+                <div className="audio__row-info">
+                    {Object.keys(music) != 0 ? <p>{music.title}</p> : <p>Песня не выбрана</p>}
+                </div>
+                <div class="time">
+                    <div ref={currentRef} class="current">0:00</div>
+                    <div class="divider">/</div>
+                    <div ref={lengthRef} class="length">0:00</div>
+                </div>
             </div>
-            <div className="audio__row-controls mt-10">
+            <div className="audio__row-controls">
                 <button className='audio__btn'>
                     <img src={prev_icon} width='19' height='19' alt="" />
                 </button>
@@ -52,7 +97,9 @@ const AudioPlayer = () => {
                 <button className='audio__btn'>
                     <img src={next_icon} width='19' height='19' alt="" />
                 </button>
-                <input className='music-long' type="range" />
+                <div ref={timelineRef} onClick={(e) => music_rewind(e)} class="timeline">
+                    <div ref={progressRef} class="progress"></div>
+                </div>
                 <button className='audio__btn'>
                     <img src={sound_icon} width='21' height='21' alt="" />
                 </button>

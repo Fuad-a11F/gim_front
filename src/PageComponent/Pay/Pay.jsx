@@ -22,6 +22,8 @@ const Pay = () => {
     let [name, setName] = React.useState('')
     let [cvv, setCvv] = React.useState('')
 
+    let coach = useSelector(state => state.coach.coach)
+
     React.useEffect(() => {
         numberRef.current.textContent = number
         dateRef.current.textContent = date
@@ -45,7 +47,8 @@ const Pay = () => {
         e.preventDefault()
         axios.post('http://127.0.0.2:8000/api/gim/create_ticket/', {start_time: create_ticket.start_time,
                                                                     finish_time: create_ticket.finish_time,
-                                                                    whom_id: create_ticket.what_ticket_buy}, {headers: {Authorization: 'Bearer ' + localStorage.getItem('token')}})
+                                                                    whom_id: create_ticket.what_ticket_buy,
+                                                                    coach: coach.id}, {headers: {Authorization: 'Bearer ' + localStorage.getItem('token')}})
     }
 
     let params = new URLSearchParams(window.location.search);

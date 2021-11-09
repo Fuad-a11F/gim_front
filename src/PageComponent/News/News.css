@@ -13,6 +13,18 @@
     font-size: 13px;
 }
 
+.last__auth-info a {
+    text-decoration: none;
+    color: rgb(181, 181, 181);
+    font-size: 17px;
+    
+}
+
+.last__auth-info a:hover {
+    text-decoration: underline
+
+}
+
 .popular__comment {
     margin: 10px 0 5px 40px;
 }

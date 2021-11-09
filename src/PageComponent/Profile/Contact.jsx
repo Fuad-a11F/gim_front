@@ -18,7 +18,7 @@ const Contact = ({ user_id }) => {
                 <p>Instagram: {contacts.instagram ?? 'Отсутсвует'}</p>
                 <p>Facebook: {contacts.facebook ?? 'Отсутсвует'}</p>
                 <p>Twitter: {contacts.twitter ?? 'Отсутсвует'}</p>
-                <p>Предпочитаемый способ связи: шрфыпваол</p>
+                {/* <p>Предпочитаемый способ связи: шрфыпваол</p> */}
             </div>
         )}
         </>

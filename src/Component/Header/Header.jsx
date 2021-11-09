@@ -4,7 +4,7 @@ import Registration from '../Auth/Registration'
 import Auth from './Auth'
 import logo from './images/Logo.jpg'
 import NotAuth from './NotAuth'
-import './Header.css'
+import './Header.scss'
 import { NavLink } from 'react-router-dom'
 
 const Header = ({ auth }) => {

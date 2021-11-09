@@ -11,10 +11,10 @@
 
 .setting__image {
     width: 100%;
-
+    position: relative;
 }
 
-.setting__image img {
+.avatarka_img {
     width: 100%;
     max-height: 300px;
     object-fit: contain;
@@ -77,4 +77,36 @@
     height: 40px;
     position: relative;
     z-index: 7;
+}
+
+.file_input {
+    display: none;
+}
+
+.file_add_button {
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 5px);
+}
+
+.file_add_button:hover {
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.file_add_button:hover .add_image-icon {
+    opacity: 0.6;
+}
+
+.add_image-icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    opacity: 0.2;
 }

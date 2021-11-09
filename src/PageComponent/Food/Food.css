@@ -73,7 +73,8 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     color: black;
     width: 210px;
-    padding: 4px
+    padding: 4px;
+    z-index: 8;
 }
 
 .food__price-tab input {
@@ -107,6 +108,7 @@
 
 .foodHave {
     width: 100%;
+    position: relative;
 }
 
 .foodHave img {
@@ -123,7 +125,10 @@
 
 .allFoodProgram {
     height: 500px;
-    overflow: auto
+    overflow: auto;
+    border-radius: 10px;
+    margin: 7px 0;
+    padding: 5px
 }
 
 .allFoodProgram {
@@ -138,6 +143,9 @@
     top: 0;
     right: 0;
     background-color: red;
+    color: white;
+    padding: 3px;
+    border-bottom-left-radius: 10px;
 }
 
 
@@ -146,3 +154,25 @@
     flex-direction: column;
 }
 
+.foodHave:hover img {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.foodHave:hover .food-theme {
+    background-color: rgba(0,0,0,0.0);
+}
+
+.foodHave__more:hover img {
+    transform: translateY(-10px)
+}
+
+.food-theme {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 5px);
+    width: 100%;
+    z-index: 5;
+    cursor: pointer;
+}

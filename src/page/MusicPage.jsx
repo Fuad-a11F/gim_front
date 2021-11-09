@@ -5,11 +5,14 @@ import Subscribe from '../PageComponent/Music/Subscribe'
 
 const MusicPage = () => {
     let [paid, setPaid] = React.useState(true)
+    let location = window.location.pathname.lastIndexOf('/')
 
     return (
         <div>
             {!paid && <Subscribe />}
-            {paid && (window.location.pathname.lastIndexOf('/') == 0 ? <Music /> : <Music path={window.location.pathname} />)}
+            {paid && (
+                location == 0 ? <Music /> : <Music path={window.location.pathname} />
+            )}
         </div>
     )
 }

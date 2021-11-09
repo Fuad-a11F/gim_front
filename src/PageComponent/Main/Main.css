@@ -72,3 +72,9 @@
         transform: translateY(20px);
     }
 }
+
+.main-coach__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px
+}
